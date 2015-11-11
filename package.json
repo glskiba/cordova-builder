@@ -1,0 +1,12 @@
+{
+  "name": "cordova-builder",
+  "description": "Build tool for Cordova apps",
+  "version": "0.0.1",
+  "main": "./lib/build-cordova.js",
+  "dependencies": {
+    "lodash": "*",
+    "fs-extra": "*",
+    "commander": "*",
+    "gm": "*"
+  }
+}

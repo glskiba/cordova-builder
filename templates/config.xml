@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="${app.java-name}" 
+    version="${app.version}" 
+    ios-CFBundleVersion="${app.platforms.ios.CFBundleVersion}"
+    android-versionCode="${app.platforms.android.versionCode}"
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>${app.name}</name>
+    <description>${app.description}</description>
+    <author email="${author.email}" href="${author.web-site}" >${author.name}</author>
+    <content src="${app.contents-main}" />
+    <access origin="*" />
+
+    <preference name="fullscreen" value="${app.preferences.fullscreen}" />
+    <preference name="webviewbounce" value="${app.preferences.webviewbounce}" />
+    <preference name="Orientation" value="${app.preferences.orientation}" />
+
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+
+    <plugin name="cordova-plugin-whitelist" version="1" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+${build.resources.android.xml}
+    </platform>
+
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+${build.resources.ios.xml}
+        <key>UISupportedInterfaceOrientations</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+    </platform>
+
+</widget>

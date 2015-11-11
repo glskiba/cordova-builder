@@ -1,0 +1,122 @@
+{
+    "author": {
+        "name": "MyCompany",
+        "web-site": "http://www.mycompany.com",
+        "email": "support@mycompany.com"
+    },
+    "app": {
+        "name": "HelloWorldz",
+        "description": "Cordova Builder Sample",
+        "title": "Builder - Test App",
+        "java-name": "com.cordovabuilder.mobile.test",
+        "version": "1.0.0",
+        "build": {
+            "root-dir": ".",
+            "target-bin-dir": "./cordova-bin",
+            "release": false,
+            "verbose": false
+        },
+        "contents": [],
+        "contents-main": "index.html",
+        "platforms": {
+            "ios": {
+                "build": true,
+                "release": false,
+                "CFBundleVserion": 1
+            },
+            "android": {
+                "build": "true",
+                "release": false,
+                "versionCode": 1
+            }
+        },
+        "plugins": [],
+        "preferences": {
+            "fullscreen": true,
+            "webviewbounce": true,
+            "orientation": "default"
+        },
+        "sources": {
+            "splash": [],
+            "icons": [],
+            "screen": [],
+            "store": []
+        }
+    },
+    "platforms":  {
+        "android": {
+            "artifacts": {
+                "bin-folder": "${BUILDER}/${app.name}/platforms/android/build/outputs/apk",
+                "names": {
+                    "signed": "${app.name}-release.apk",
+                    "unsigned": "${app.name}-release-unsigned.apk"
+                }
+            },
+            "resource-dest-root": "${BUILDER}/${app.name}/platforms/android/res",
+            "!!xml-tpl": "        <${type} src=\"${saveAs}\" width=\"${width}\" height=\"${height}\" />",
+            "resources": {
+                "icon": [
+                    { "width":   48, "height":   48, "saveAs": "drawable-mdpi/icon.png" },
+                    { "width":   72, "height":   72, "saveAs": "drawable-hdpi/icon.png" },
+                    { "width":   96, "height":   96, "saveAs": "drawable-xhdpi/icon.png" },
+                    { "width":  145, "height":  145, "saveAs": "drawable-xxhdpi/icon.png" }
+                ],
+                "splash": [
+                    { "width":  320, "height":  480, "saveAs": "drawable-port-mdpi/screen.png" },
+                    { "width":  640, "height":  960, "saveAs": "drawable-port-mdpi/screen.png" },
+                    { "width":  640, "height": 1136, "saveAs": "drawable-port-mdpi/screen.png" },
+                    { "width":  750, "height": 1334, "saveAs": "drawable-port-mdpi/screen.png" },
+                    { "width":  768, "height": 1024, "saveAs": "drawable-port-mdpi/screen.png" },
+
+                    { "width": 1024, "height": 1024, "saveAs": "drawable-port-mdpi/screen.png" },
+
+                    { "width": 1536, "height": 2048, "saveAs": "drawable-land-mdpi/screen.png" },
+                    { "width": 1242, "height": 2208, "saveAs": "drawable-land-mdpi/screen.png" },
+                    { "width": 1024, "height":  768, "saveAs": "drawable-land-mdpi/screen.png" },
+                    { "width": 2048, "height": 1536, "saveAs": "drawable-land-mdpi/screen.png" },
+                    { "width": 2208, "height": 1242, "saveAs": "drawable-land-mdpi/screen.png" }
+                ]
+            }
+        },
+        "ios": {
+            "artifacts": {
+                "bin-folder": "${BUILDER}/${app.name}/platforms/ios/build/device"
+            },
+            "resource-dest-root": "${BUILDER}/${app.name}",
+            "xml-tpl": "        <${type} src=\"${saveAs}\" width=\"${width}\" height=\"${height}\" />",
+            "resources": {
+                "icon": [
+                    { "width":   29, "height":   29, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   40, "height":   40, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   50, "height":   50, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   57, "height":   57, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   58, "height":   58, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   60, "height":   60, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   72, "height":   72, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   76, "height":   76, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":   80, "height":   80, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  100, "height":  100, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  114, "height":  114, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  120, "height":  120, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  144, "height":  144, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  152, "height":  152, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width":  180, "height":  180, "saveAs": "ios-images/icon-@Wx@H.png" },
+                    { "width": 1024, "height": 1024, "saveAs": "ios-images/icon-@Wx@H.png" }
+                ],
+                "splash": [
+                    { "width":  320, "height":  480, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width":  640, "height":  960, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width":  640, "height": 1136, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width":  750, "height": 1334, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width":  768, "height": 1024, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 1024, "height": 1024, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 1536, "height": 2048, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 1242, "height": 2208, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 1024, "height":  768, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 2048, "height": 1536, "saveAs": "ios-images/splash-@Wx@H.png" },
+                    { "width": 2208, "height": 1242, "saveAs": "ios-images/splash-@Wx@H.png" }
+                ]
+            }
+        }
+    }
+}
